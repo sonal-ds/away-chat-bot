@@ -1,0 +1,12 @@
+{
+  "dirs": {
+    "themes":"themes",
+    "cards": "cards",
+    "config":"config",
+    "overrides":"overrides",
+    "output":"public",
+    "pages":"pages",
+    "layouts":"layouts"
+  },
+  "defaultTheme": "answers-hitchhiker-theme"
+}

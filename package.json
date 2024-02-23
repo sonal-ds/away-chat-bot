@@ -1,0 +1,73 @@
+{
+  "name": "jambo",
+  "version": "1.12.4",
+  "description": "A JAMStack implementation using Handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint . && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yext/jambo.git"
+  },
+  "bin": {
+    "jambo": "src/cli.js"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "author": "nbramblett@yext.com",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/yext/jambo/issues"
+  },
+  "homepage": "https://github.com/yext/jambo#readme",
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "comment-json": "^3.0.2",
+    "file-system": "^2.2.2",
+    "fs-extra": "^8.1.0",
+    "gettext-extractor": "^3.5.2",
+    "glob-to-regexp": "^0.4.1",
+    "globby": "^11.0.1",
+    "handlebars": "^4.7.3",
+    "i18next": "^19.6.2",
+    "i18next-conv": "^10.0.2",
+    "lodash": "^4.17.15",
+    "merge-options": "^2.0.0",
+    "npmlog": "^6.0.2",
+    "prompts": "^2.3.1",
+    "simple-git": "^3.17.0",
+    "yargs": "^17.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-object-assign": "^7.12.1",
+    "@types/jest": "^26.0.23",
+    "eslint": "^7.8.1",
+    "jambo": "^1.12.4",
+    "jest": "^25.4.0",
+    "prettier": "^2.2.1",
+    "shell-quote": "^1.7.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**"
+    ],
+    "verbose": true,
+    "globalSetup": "./tests/setup/globalsetup.js",
+    "globalTeardown": "./tests/setup/globalteardown.js",
+    "setupFilesAfterEnv": [
+      "./tests/setup/setup.js"
+    ],
+    "testMatch": [
+      "**/tests/**/*.js",
+      "!**/tests/acceptance/**/*.js",
+      "**/tests/acceptance/suites/**/*.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/tests/fixtures/",
+      "<rootDir>/tests/setup/"
+    ]
+  }
+}
